@@ -15,6 +15,12 @@
 
   <ItemGroup>
     <None Include="src\apigateway\ApiGateway.csproj" />
+    <None Include="src\productservice\ProductService.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\ApiGateway\DTOs\" />
+    <Folder Include="src\ProductService\Controllers\" />
   </ItemGroup>
 
 </Project>
