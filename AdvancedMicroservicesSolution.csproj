@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="src\ApiGateway\DTOs\" />
     <Folder Include="src\ProductService\Controllers\" />
+    <Folder Include="src\Shared\Models\" />
   </ItemGroup>
 
 </Project>
