@@ -16,6 +16,7 @@
   <ItemGroup>
     <None Include="src\apigateway\ApiGateway.csproj" />
     <None Include="src\productservice\ProductService.csproj" />
+    <None Include="tests\ApiGateway.Tests\ApiGateway.Tests.csproj" />
   </ItemGroup>
 
   <ItemGroup>
