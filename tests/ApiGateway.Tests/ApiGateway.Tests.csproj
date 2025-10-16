@@ -1,6 +1,0 @@
-﻿namespace AdvancedMicroservicesSolution.tests.ApiGateway.Tests
-{
-    public class ApiGateway
-    {
-    }
-}

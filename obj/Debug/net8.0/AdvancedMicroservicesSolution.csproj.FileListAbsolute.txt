@@ -1,9 +1,0 @@
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.csproj.AssemblyReference.cache
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.GeneratedMSBuildEditorConfig.editorconfig
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.AssemblyInfoInputs.cache
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.AssemblyInfo.cs
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.csproj.CoreCompileInputs.cache
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.MvcApplicationPartsAssemblyInfo.cs
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.MvcApplicationPartsAssemblyInfo.cache
-C:\users\usuario\source\repos\advancedmicroservicessolution\advancedmicroservicessolution\obj\Debug\net8.0\AdvancedMicroservicesSolution.sourcelink.json
