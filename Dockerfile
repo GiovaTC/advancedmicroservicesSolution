@@ -1,30 +1,48 @@
-# Consulte https://aka.ms/customizecontainer para aprender a personalizar su contenedor de depuración y cómo Visual Studio usa este Dockerfile para compilar sus imágenes para una depuración más rápida.
-
-# Esta fase se usa cuando se ejecuta desde VS en modo rápido (valor predeterminado para la configuración de depuración)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
-
-# Esta fase se usa para compilar el proyecto de servicio
+﻿# ============================================================
+# 🧱 Etapa base de build (para todos los proyectos)
+# ============================================================
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["AdvancedMicroservicesSolution/AdvancedMicroservicesSolution.csproj", "AdvancedMicroservicesSolution/"]
-RUN dotnet restore "./AdvancedMicroservicesSolution/AdvancedMicroservicesSolution.csproj"
+
+# Copiar archivos de la solución y restaurar dependencias
+COPY ./src/ApiGateway/ApiGateway.csproj ./src/ApiGateway/
+COPY ./src/ProductService/ProductService.csproj ./src/ProductService/
+COPY ./src/Shared/*.csproj ./src/Shared/
+RUN dotnet restore ./src/ApiGateway/ApiGateway.csproj
+RUN dotnet restore ./src/ProductService/ProductService.csproj
+
+# Copiar todo el código fuente
 COPY . .
-WORKDIR "/src/AdvancedMicroservicesSolution"
-RUN dotnet build "./AdvancedMicroservicesSolution.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Esta fase se usa para publicar el proyecto de servicio que se copiará en la fase final.
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./AdvancedMicroservicesSolution.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+# ============================================================
+# 🧩 Etapa build: ApiGateway
+# ============================================================
+FROM build AS build-apigateway
+RUN dotnet publish ./src/ApiGateway/ApiGateway.csproj -c Release -o /app/api
 
-# Esta fase se usa en producción o cuando se ejecuta desde VS en modo normal (valor predeterminado cuando no se usa la configuración de depuración)
-FROM base AS final
+# ============================================================
+# 🧩 Etapa build: ProductService
+# ============================================================
+FROM build AS build-productservice
+RUN dotnet publish ./src/ProductService/ProductService.csproj -c Release -o /app/product
+
+# ============================================================
+# 🚀 Etapa runtime base
+# ============================================================
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "AdvancedMicroservicesSolution.dll"]
+
+# Puerto por defecto
+ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_ENVIRONMENT=Production
+EXPOSE 8080
+
+# Variable para elegir cuál servicio ejecutar
+ARG SERVICE=none
+
+# Copiar el servicio correspondiente
+COPY --from=build-apigateway /app/api ./api
+COPY --from=build-productservice /app/product ./product
+
+# Selección dinámica del microservicio
+ENTRYPOINT ["sh", "-c", "if [ \"$SERVICE\" = 'apigateway' ]; then dotnet ./api/ApiGateway.dll; elif [ \"$SERVICE\" = 'productservice' ]; then dotnet ./product/ProductService.dll; else echo '❌ Debes definir SERVICE=apigateway o productservice'; fi"]
