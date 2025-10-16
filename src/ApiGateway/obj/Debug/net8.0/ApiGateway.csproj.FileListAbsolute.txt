@@ -1,9 +1,0 @@
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.csproj.AssemblyReference.cache
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.AssemblyInfoInputs.cache
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.AssemblyInfo.cs
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.csproj.CoreCompileInputs.cache
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\USUARIO\source\repos\AdvancedMicroservicesSolution\AdvancedMicroservicesSolution\src\ApiGateway\obj\Debug\net8.0\ApiGateway.sourcelink.json
