@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HuCN0QzZzZo=",
+  "dgSpecHash": "Poqi9lbWTm8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution.csproj",
+  "projectFilePath": "C:\\users\\usuario\\source\\repos\\advancedmicroservicessolution\\advancedmicroservicessolution\\AdvancedMicroservicesSolution.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.1\\microsoft.aspnetcore.authentication.jwtbearer.8.0.1.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.10\\microsoft.entityframeworkcore.9.0.10.nupkg.sha512",
@@ -50,9 +50,7 @@
     "C:\\Users\\USUARIO\\.nuget\\packages\\system.io.pipelines\\9.0.0\\system.io.pipelines.9.0.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\system.text.encodings.web\\9.0.0\\system.text.encodings.web.9.0.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\system.text.json\\9.0.0\\system.text.json.9.0.0.nupkg.sha512",
-    "C:\\Users\\USUARIO\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
-    "C:\\Users\\USUARIO\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
-    "C:\\Users\\USUARIO\\.nuget\\packages\\xunit.extensibility.core\\2.9.3\\xunit.extensibility.core.2.9.3.nupkg.sha512"
+    "C:\\Users\\USUARIO\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

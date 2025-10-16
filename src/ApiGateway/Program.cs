@@ -1,7 +1,7 @@
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using System.Text;
-using AdvancedMicroservicesSolution.src.Shared;
+using AdvancedMicroservicesSolution.Shared;
 using AdvancedMicroservicesSolution.src.ApiGateway.Services;
 using AdvancedMicroservicesSolution.src.ApiGateway.Messaging;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

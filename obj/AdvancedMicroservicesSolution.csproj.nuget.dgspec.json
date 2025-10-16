@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USUARIO\\source\\repos\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution.csproj": {}
+    "C:\\users\\usuario\\source\\repos\\advancedmicroservicessolution\\advancedmicroservicessolution\\AdvancedMicroservicesSolution.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USUARIO\\source\\repos\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution.csproj": {
+    "C:\\users\\usuario\\source\\repos\\advancedmicroservicessolution\\advancedmicroservicessolution\\AdvancedMicroservicesSolution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution.csproj",
+        "projectUniqueName": "C:\\users\\usuario\\source\\repos\\advancedmicroservicessolution\\advancedmicroservicessolution\\AdvancedMicroservicesSolution.csproj",
         "projectName": "AdvancedMicroservicesSolution",
-        "projectPath": "C:\\Users\\USUARIO\\source\\repos\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution.csproj",
+        "projectPath": "C:\\users\\usuario\\source\\repos\\advancedmicroservicessolution\\advancedmicroservicessolution\\AdvancedMicroservicesSolution.csproj",
         "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USUARIO\\source\\repos\\AdvancedMicroservicesSolution\\AdvancedMicroservicesSolution\\obj\\",
+        "outputPath": "C:\\users\\usuario\\source\\repos\\advancedmicroservicessolution\\advancedmicroservicessolution\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -78,14 +78,6 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"
-            },
-            "xunit.abstractions": {
-              "target": "Package",
-              "version": "[2.0.3, )"
-            },
-            "xunit.extensibility.core": {
-              "target": "Package",
-              "version": "[2.9.3, )"
             }
           },
           "imports": [
@@ -107,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.2.25502.107/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,7 +8,7 @@ namespace AdvancedMicroservicesSolution.src.ApiGateway.Messaging
     public class RabbitMqPublisher : IDisposable
     {
         private readonly IConnection _connection;
-        private readonly IChannel _channel;
+        private readonly IModel _channel;
         private readonly IConfiguration _config;
 
         public RabbitMqPublisher(IConfiguration config)
@@ -27,11 +27,11 @@ namespace AdvancedMicroservicesSolution.src.ApiGateway.Messaging
                 Password = pass
             };
 
-            // Nueva API (asincrónica) en RabbitMQ.Client 7+
-            _connection = factory.CreateConnectionAsync().GetAwaiter().GetResult();
-            _channel = _connection.CreateChannelAsync().GetAwaiter().GetResult();
+            // API síncrona tradicional de RabbitMQ.Client
+            _connection = factory.CreateConnection();
+            _channel = _connection.CreateModel();
 
-            _channel.ExchangeDeclareAsync(exchange, ExchangeType.Fanout, durable: true).GetAwaiter().GetResult();
+            _channel.ExchangeDeclare(exchange, ExchangeType.Fanout, durable: true);
         }
 
         public void Publish<T>(T message, string routingKey = "")
@@ -40,7 +40,7 @@ namespace AdvancedMicroservicesSolution.src.ApiGateway.Messaging
             var json = JsonSerializer.Serialize(message);
             var body = Encoding.UTF8.GetBytes(json);
 
-            _channel.BasicPublishAsync(exchange, routingKey, body).GetAwaiter().GetResult();
+            _channel.BasicPublish(exchange, routingKey, null, body);
         }
 
         public void Dispose()
