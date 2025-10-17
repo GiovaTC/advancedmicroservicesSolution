@@ -9,7 +9,7 @@ namespace AdvancedMicroservicesSolution.src.ApiGateway.Messaging
     public class RabbitMqPublisher : IDisposable
     {
         private readonly IConnection _connection;
-        private readonly IModel _channel;
+        private readonly RabbitMQ.Client.IModel _channel;
         private readonly IConfiguration _config;
 
         public RabbitMqPublisher(IConfiguration config)
